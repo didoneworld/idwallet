@@ -1,0 +1,13 @@
+{
+  "name": "idwallet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Starter modules for a VP-based identity wallet",
+  "type": "module",
+  "dependencies": {
+    "@digitalbazaar/vc": "^7.2.0",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "jsonld": "^8.3.2",
+    "react-native-keychain": "^9.1.0"
+  }
+}
