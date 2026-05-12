@@ -123,3 +123,51 @@ Contribution guidelines will be expanded once the project structure is available
 ## License
 
 License information has not been added yet. Add a `LICENSE` file and update this section when the project license is finalized.
+
+---
+## Platform Integration
+
+This repository is a standalone component of the DID One World unified identity platform.
+
+### Platform Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│            DID One World Platform                  │
+├─────────────────────────────────────────────────┤
+│  idwallet     →  Agent-DID  →  verifiable-cred │
+│  (Wallet)       (Identity)     (Credentials)    │
+└─────────────────────────────────────────────┘
+```
+
+### Component Role
+
+| Component | Provides |
+|-----------|----------|
+| **Agent-DID** | Agent identity registry, lifecycle management |
+| **verifiable-credential** | Credential issuance, verification |
+| **idwallet** (this repo) | User wallet, credential storage, presentation, crypto |
+
+### Standalone Usage
+
+```bash
+# Development
+npm install
+npm run dev
+```
+
+### API / SDK Features
+
+| Feature | Description |
+|---------|-------------|
+| Wallet creation | Create identity wallets |
+| Credential storage | Store verifiable credentials |
+| VP generation | Generate verifiable presentations |
+| Crypto operations | Key generation, signing |
+
+### Integration Points
+
+When integrated with platform:
+- Agent identity from `Agent-DID` repo
+- Credentials from `verifiable-credential` repo
+- Full platform at [didoneworld/platform](https://github.com/didoneworld/platform)
